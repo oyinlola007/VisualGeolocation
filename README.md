@@ -12,7 +12,6 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
   - **SIFT (Scale-Invariant Feature Transform)**: Robust to scaling, rotation, and lighting changes
   - **AKAZE (Accelerated-KAZE)**: Good performance with nonlinear scale spaces
   - **ORB (Oriented FAST and Rotated BRIEF)**: Fast and efficient binary descriptor
-  - **FAST (Features from Accelerated Segment Test)**: High-speed corner detector
 
 - **Bidirectional Matching in SIFT**: Implements symmetric matching only in the SIFT algorithm to ensure consistent results regardless of image order (A→B equals B→A)
 
@@ -49,7 +48,7 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
 4. **Similarity Calculation**:
    - Similarity scores are calculated based on the number and quality of matches
    - For SIFT: Normalized count of good matches
-   - For ORB/FAST: Combination of match ratio and inverse average distance
+   - For ORB: Combination of match ratio and inverse average distance
 
 ### Location Prediction Process
 
@@ -99,10 +98,3 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
 - Implements Material Design components for adaptive UI (works in both light and dark themes)
 - Proper file sharing with FileProvider for exporting results
 - Multi-threaded processing for improved performance
-
-## Performance Considerations
-
-- SIFT provides the most accurate matches but requires more processing power
-- ORB and FAST are faster alternatives with reasonable accuracy
-- Bidirectional matching improves consistency but requires additional computation
-- Location prediction accuracy improves with larger datasets of geographically related images 
