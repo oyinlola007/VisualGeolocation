@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ImageSelectionFragment">
+
+    <fragment
+        android:id="@+id/ImageSelectionFragment"
+        android:name="com.esigelec.visualgeolocation.fragments.ImageSelectionFragment"
+        android:label="Select Images"
+        tools:layout="@layout/fragment_image_selection">
+        <action
+            android:id="@+id/action_ImageSelectionFragment_to_ImageGridFragment"
+            app:destination="@id/ImageGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ImageGridFragment"
+        android:name="com.esigelec.visualgeolocation.fragments.ImageGridFragment"
+        android:label="Select Test Image"
+        tools:layout="@layout/fragment_image_grid">
+        <action
+            android:id="@+id/action_ImageGridFragment_to_MatchResultsFragment"
+            app:destination="@id/MatchResultsFragment" />
+        <action
+            android:id="@+id/action_ImageGridFragment_to_BatchAnalysisFragment"
+            app:destination="@id/BatchAnalysisFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MatchResultsFragment"
+        android:name="com.esigelec.visualgeolocation.fragments.MatchResultsFragment"
+        android:label="Match Results"
+        tools:layout="@layout/fragment_match_results" />
+
+    <fragment
+        android:id="@+id/BatchAnalysisFragment"
+        android:name="com.esigelec.visualgeolocation.fragments.BatchAnalysisFragment"
+        android:label="Batch Analysis"
+        tools:layout="@layout/fragment_batch_analysis" />
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.esigelec.visualgeolocation.FirstFragment"
+        android:label="First Fragment"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.esigelec.visualgeolocation.SecondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second" />
+
+</navigation>

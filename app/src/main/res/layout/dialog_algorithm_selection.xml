@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RadioGroup
+        android:id="@+id/algorithmGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/siftRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIFT"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/fastRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAST"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/akazeRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AKAZE"/>
+
+        <RadioButton
+            android:id="@+id/orbRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ORB"/>
+
+    </RadioGroup>
+
+</LinearLayout> 
