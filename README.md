@@ -43,7 +43,7 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
    - In the SIFT algorithm, matches in both directions (A→B and B→A) are computed
    - Only matches present in both directions are kept, ensuring symmetry
    - This eliminates asymmetric results when matching different image pairs
-   - Other algorithms (AKAZE, ORB, FAST) use standard unidirectional matching
+   - Other algorithms (AKAZE, ORB) use standard unidirectional matching
 
 4. **Similarity Calculation**:
    - Similarity scores are calculated based on the number and quality of matches
