@@ -98,3 +98,8 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
 - Implements Material Design components for adaptive UI (works in both light and dark themes)
 - Proper file sharing with FileProvider for exporting results
 - Multi-threaded processing for improved performance
+
+## Collaborators
+- Oyinlola Ojelere
+- Obaitan Elizabeth
+- Jie Pengyu
