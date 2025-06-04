@@ -106,13 +106,14 @@ public abstract class BaseImageMatcher implements ImageMatcher {
 
     protected Mat loadImage(Uri imageUri) throws IOException {
         Log.d(TAG, "Loading image from URI: " + imageUri);
-        InputStream inputStream = context.getContentResolver().openInputStream(imageUri);
-        Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-        Log.d(TAG, "Bitmap decoded, size: " + bitmap.getWidth() + "x" + bitmap.getHeight());
-        Mat mat = new Mat();
-        Utils.bitmapToMat(bitmap, mat);
-        Log.d(TAG, "Mat created, size: " + mat.size());
-        return mat;
+        try (InputStream inputStream = context.getContentResolver().openInputStream(imageUri)) {
+            Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+            Log.d(TAG, "Bitmap decoded, size: " + bitmap.getWidth() + "x" + bitmap.getHeight());
+            Mat mat = new Mat();
+            Utils.bitmapToMat(bitmap, mat);
+            Log.d(TAG, "Mat created, size: " + mat.size());
+            return mat;
+        }
     }
 
     protected abstract double calculateSimilarity(MatOfDMatch matches);
