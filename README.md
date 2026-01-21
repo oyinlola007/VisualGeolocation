@@ -32,7 +32,7 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
 
 1. **Feature Detection and Description**:
    - Each algorithm extracts keypoints and descriptors from images
-   - Images are standardized to 500x500 pixels for consistent processing
+   - Images are standardised to 500x500 pixels for consistent processing
 
 2. **Feature Matching**:
    - Keypoint descriptors from the test image are matched against reference images
@@ -47,7 +47,7 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
 
 4. **Similarity Calculation**:
    - Similarity scores are calculated based on the number and quality of matches
-   - For SIFT: Normalized count of good matches
+   - For SIFT: Normalised count of good matches
    - For ORB: Combination of match ratio and inverse average distance
 
 ### Location Prediction Process
@@ -71,8 +71,8 @@ Visual Geolocation leverages OpenCV's feature detection and matching algorithms 
      weightedAvgLat = (Σ match.lat × match.similarity) / (Σ match.similarity)
      weightedAvgLng = (Σ match.lng × match.similarity) / (Σ match.similarity)
      ```
-   - Higher similarity scores have stronger influence on the weighted average location
-   - This prioritizes locations from visually similar images in the prediction
+   - Higher similarity scores have a stronger influence on the weighted average location
+   - This prioritises locations from visually similar images in the prediction
 
 4. **Distance Calculation**:
    - Haversine formula calculates geodesic distance between points on a sphere:
